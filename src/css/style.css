@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: rgb(208, 255, 239);
+}
+
+.main-game {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #CCC;
+}
+
+.main-game h1 {
+	font-family: "Helvetica","Brush Script MT";
+	font-size:48px;
+	color: #FFF;
+	text-shadow: -2px -2px #333;
+	user-select: none;
+}
+
+.genius {
+	display: grid;
+	grid-template-areas: 'verde vermelho'
+	'amarelo azul';
+	grid-gap: 10px;
+	border: 1px solid #ffffff;
+	background-color: #222;
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	box-shadow: 3px 3px #AAA;
+}
+
+.button {
+  box-shadow: 3px 3px #111;
+  opacity: 1.0;
+}
+
+.blue {
+    grid-area: azul;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.blue:hover {
+   box-shadow: 0px 0px 20px blue;
+}
+
+.red {
+    grid-area: vermelho;
+    background-color: hsl(0,100%,55%);
+    border-top-right-radius: 100%;
+}
+
+.red:hover {
+	box-shadow: 0px 0px 20px hsl(0,100%,60%);
+}
+
+.yellow {
+	grid-area: amarelo;
+	background-color: yellow;
+	border-bottom-left-radius: 100%;
+}
+
+.yellow:hover {
+	box-shadow: 0px 0px 20px yellow;
+}
+
+.green {
+	grid-area: verde;
+	background-color: green;
+	border-top-left-radius: 100%;
+}
+
+.green:hover {
+  box-shadow: 0px 0px 20px green;
+}
+
+.selected {
+	animation-name: blink;
+	animation-iteration-count: 1;
+	animation-duration: 0.5s;
+}
+
+@keyframes blink {
+	from {
+	opacity: 0.5;
+	} 
+	to {
+	opacity: 1.0;
+	}
+}
